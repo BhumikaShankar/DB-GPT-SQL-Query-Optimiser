@@ -30,7 +30,7 @@ cd DB-GPT-SQL-Query-Optimiser
 ### **Install Dependencies**
 pip install -r requirements.txt
 ### **Setup the Database**
-CREATE DATABASE DATABASE_NAME;
+Create the table, add dummy data
 
 ## **Usage**
 ### **1. Run the backend**
