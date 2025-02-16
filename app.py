@@ -8,13 +8,13 @@ app = Flask(__name__)
 # MySQL Configuration
 db_config = {
     "host": "localhost",
-    "user": "gptuser",
-    "password": "gptuser",
-    "database": "GPTEMPLOYEE"
+    "user": "user_name",
+    "password": "your_password",
+    "database": "your_database_name"
 }
 
 # Google Gemini API Configuration
-GOOGLE_API_KEY = "AIzaSyDnq62qZL4QR8nAiJdYDSjT3dpCEXQZ0SU"
+GOOGLE_API_KEY = "YOUR_API_KEY"
 GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key={GOOGLE_API_KEY}"
 
 # Define the correct schema
@@ -47,23 +47,23 @@ def convert_to_sql(nl_query):
     {TABLE_SCHEMA}
 
     Convert the following natural language query into:
-    1️⃣ **Actual Query** – A simple SQL query that a beginner might write.
+     1️ **Actual Query** – A simple SQL query that a beginner might write.
        - Can use `WHERE IN` instead of `JOIN`
        - Can include `SELECT *` instead of selecting specific columns
        - Can use **nested subqueries** for filtering
 
-    2️⃣ **Optimized Query** – A performance-enhanced version of the Actual Query.
+     2️ **Optimized Query** – A performance-enhanced version of the Actual Query.
        - Use **explicit JOINs** instead of `WHERE IN`
        - Select **only necessary columns** instead of `SELECT *`
        - **Avoid nested subqueries** when possible
 
     ### Example 1:
-    💬 **Query:** "Show details of all HR employees."
-    ✅ **Actual Query:**
+     **Query:** "Show details of all HR employees."
+     **Actual Query:**
     ```sql
     SELECT * FROM employees WHERE department_id IN (SELECT id FROM departments WHERE name = 'HR');
     ```
-    ✅ **Optimized Query:**
+    **Optimized Query:**
     ```sql
     SELECT e.id, e.name, d.name AS department, e.salary
     FROM employees e
@@ -72,12 +72,12 @@ def convert_to_sql(nl_query):
     ```
 
     ### Example 2:
-    💬 **Query:** "Show employees working on AI Development."
-    ✅ **Actual Query:**
+     **Query:** "Show employees working on AI Development."
+    **Actual Query:**
     ```sql
     SELECT * FROM employees WHERE project_id IN (SELECT id FROM projects WHERE name = 'AI Development');
     ```
-    ✅ **Optimized Query:**
+     **Optimized Query:**
     ```sql
     SELECT e.id, e.name, d.name AS department, e.salary
     FROM employees e
@@ -90,7 +90,7 @@ def convert_to_sql(nl_query):
     
     Now, generate both the Actual Query and Optimized Query for this user request:
 
-    💬 **Query:** {nl_query}
+     **Query:** {nl_query}
 
     **Format:**
     Actual Query: <Beginner-Friendly SQL>
