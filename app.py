@@ -8,7 +8,7 @@ app = Flask(__name__)
 # MySQL Configuration
 db_config = {
     "host": "localhost",
-    "user": "user_name",
+    "user": "your_user_name",
     "password": "your_password",
     "database": "your_database_name"
 }
@@ -19,13 +19,10 @@ GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemin
 
 # Define the correct schema
 TABLE_SCHEMA = """
-Database: GPTEMPLOYEE
+Database: your_database_name
 Tables:
-- employees(id, name, department_id, salary, hire_date, email, phone, manager_id, project_id)
-- departments(id, name, location)
-- projects(id, name, budget, start_date, end_date)
-- salaries(id, employee_id, salary, date_updated)
-- attendances(id, employee_id, check_in, check_out)
+-the tables you have created
+
 """
 
 def clean_sql_query(sql_query):
@@ -57,7 +54,7 @@ def convert_to_sql(nl_query):
        - Select **only necessary columns** instead of `SELECT *`
        - **Avoid nested subqueries** when possible
 
-    ### Example 1:
+   """{ ### Example 1:
      **Query:** "Show details of all HR employees."
      **Actual Query:**
     ```sql
@@ -83,7 +80,7 @@ def convert_to_sql(nl_query):
     FROM employees e
     JOIN departments d ON e.department_id = d.id
     JOIN projects p ON e.project_id = p.id
-    WHERE p.name = 'AI Development';
+    WHERE p.name = 'AI Development'; }"""
     ```
 
     ---
@@ -104,7 +101,7 @@ def convert_to_sql(nl_query):
         response = requests.post(GEMINI_API_URL, json=payload)
         response_data = response.json()
 
-        # Check if API call was successful
+       
         if response.status_code != 200:
             return None, None, f"API error: {response_data}"
 
