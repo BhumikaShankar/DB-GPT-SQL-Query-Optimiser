@@ -8,10 +8,10 @@ This project transforms **natural language queries** into **optimized SQL querie
 
 ---
 
-## ** Features**
-✅ Converts **natural language** into **SQL queries**
-✅ Generates both **actual SQL queries** (beginner-friendly) and **optimized queries** (performance-tuned)
-✅ Executes SQL queries on **MySQL** and displays results in a **table format**s
+## Features
+1. Converts **natural language** into **SQL queries**
+2. Generates both **actual SQL queries** (beginner-friendly) and **optimized queries** (performance-tuned)
+3. Executes SQL queries on **MySQL** and displays results in a **table format**s
 
 ---
 
@@ -25,6 +25,7 @@ Ensure you have the following installed:
 ###  Clone the Repository
 
 git clone (https://github.com/BhumikaShankar/DB-GPT-SQL-Query-Optimiser.git)
+
 cd DB-GPT-SQL-Query-Optimiser
 
 ### **Install Dependencies**
