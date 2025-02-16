@@ -24,8 +24,8 @@ Ensure you have the following installed:
 
 ### ** Clone the Repository**
 
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd repo-name
+git clone (https://github.com/BhumikaShankar/DB-GPT-SQL-Query-Optimiser.git)
+cd DB-GPT-SQL-Query-Optimiser
 
 ### **Install Dependencies**
 pip install -r requirements.txt
@@ -40,8 +40,8 @@ streamlit run frontend.py
 
 ## **Technologies Used**
 
-## **Flask – Backend API**
-## **Google Gemini API – NLP to SQL conversion**
-## **MySQL – Database**
-## **Streamlit – Frontend UI**
-## **Python**
+1. Flask – Backend API
+2. Google Gemini API – NLP to SQL conversion
+3. MySQL – Database
+4. Streamlit – Frontend UI
+5. Python (mysql-conenector)
