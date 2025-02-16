@@ -44,4 +44,4 @@ streamlit run frontend.py
 2. Google Gemini API – NLP to SQL conversion
 3. MySQL – Database
 4. Streamlit – Frontend UI
-5. Python (mysql-conenector)
+5. Python (mysql-connector)
