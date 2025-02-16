@@ -16,13 +16,13 @@ This project transforms **natural language queries** into **optimized SQL querie
 ---
 
 ## **Installation Guide**
-### ** Prerequisites**
+### Prerequisites
 Ensure you have the following installed:
 - **Python (>=3.8)**
 - **MySQL Server**
 - **pip (Python package manager)**
 
-### ** Clone the Repository**
+###  Clone the Repository
 
 git clone (https://github.com/BhumikaShankar/DB-GPT-SQL-Query-Optimiser.git)
 cd DB-GPT-SQL-Query-Optimiser
